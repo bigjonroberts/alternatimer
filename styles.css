@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+.timer {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.timer-header {
+  font-size: 1.5em;
+  padding: 5px 0;
+}
+
+.timer-name {
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-weight: bold;
+}
+
+.timer-display {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 15px;
+  margin: 8px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  min-width: 80px; /* Ensure minimum width for touch targets */
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  transition: background-color 0.2s;
+}
+
+button:active {
+  background-color: #e0e0e0;
+}
+
+.timer-settings {
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.time-setter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.time-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-input label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.time-input input {
+  width: 70px;
+  padding: 12px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.color-picker {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-timer-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.add-timer-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.3em;
+  padding: 15px 25px;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+}
+
+.add-timer-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 600px) {
+  .timer {
+    padding: 15px;
+  }
+  
+  .add-timer-button {
+    min-width: 200px;
+    min-height: 60px;
+    font-size: 1.4em;
+    margin: 15px 0;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 14px 16px;
+    margin: 10px 8px;
+    min-width: 90px;
+    min-height: 48px; /* Minimum touch target size */
+  }
+
+  .timer-controls {
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  }
+
+  .timer-name {
+    font-size: 1.2em;
+    padding: 8px 4px;
+  }
+  
+  .time-setter {
+    gap: 12px;
+  }
+  
+  .time-input input {
+    width: 60px;
+    padding: 12px 8px;
+    font-size: 1.1em;
+    min-height: 48px; /* Minimum touch target size */
+  }
+  
+  .color-picker input[type="color"] {
+    min-height: 44px;
+    min-width: 60px;
+  }
+}

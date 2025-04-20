@@ -1,0 +1,13 @@
+services:
+  web:
+    image: nginx:alpine  # Use the official Nginx image
+    ports:
+      - "8099:80"  # Map port 80 of the container to port 80 on the host
+    volumes:
+      - ./:/usr/share/nginx/html  # Mount the current directory to the Nginx default web root
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
